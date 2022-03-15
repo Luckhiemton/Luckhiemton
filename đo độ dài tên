@@ -1,0 +1,6 @@
+a=input("Nhap ho ten ban")
+n=len(a)
+x=a.split( )
+print('ten cua ban co',n,'ky tu')
+print('Ho cua ban la:',x[0])
+print(x)
