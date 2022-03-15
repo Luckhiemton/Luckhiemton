@@ -1,0 +1,5 @@
+sum_chuoi = 0
+for i in range (2,31,2):
+    # sum_chuoi = sum_chuoi + i
+    sum_chuoi +=i
+print('Tong so',sum_chuoi)
