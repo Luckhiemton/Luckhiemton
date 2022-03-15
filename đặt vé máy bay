@@ -1,0 +1,30 @@
+# gõ số 1 nếu hạng "first class" (chọn ghế từ 1-5)
+# gõ số 2 nếu hạng "economy"(chọn ghế từ 6-10)
+# nếu ghế có ngừoi ngồi r hiện số 1 chưa có hiện 0 dùng while
+# nếu hết ghế "first class" hỏi có muốn đi "economy" hay k, còn nếu còn thì cho đặt tiếp
+# nếu k muốn đi thì chuyến bay tiếp theo sẽ khởi hành tỏng 3 giờ nữa
+# nếu hết chỗ thì in ra "hết chỗ"
+cho_ngoi = [0]*10 #cho ra 10 so 0
+while cho_ngoi.count(0)!=0: #xem con cho ngoi k
+    a = int(input('1. First class, 2. Economy'))
+    if a==1:
+        for i in range(0,5):
+            if cho_ngoi[i] ==0:
+                cho_ngoi[i] = 1 
+                print('cho ngoi cua ban la',i+1,'first class')
+                break
+        else:
+            b = int(input('Economy? 1.Yes, 0.No'))
+            if b == 1:
+                a=2
+            elif b==0:
+                print('chuyen bay tiep theo se khoi hanh trong 3h nua')
+    if a==2:
+       for i in range(5,10):
+            if cho_ngoi[i] ==0:
+                cho_ngoi[i] = 1 
+                print('cho ngoi cua ban la',i+1,'economy')
+                break
+    if cho_ngoi.count(0)==0:
+        print('het cho')
+    print(cho_ngoi)
