@@ -1,0 +1,8 @@
+n = int(input('Hay nhap vao 1 so nguyen duong:'))
+while n<=0:
+    n = int(input('Hay nhap vao 1 so nguyen duong:'))
+giaithua = 1
+for i in range(2,n+1):
+    # giaithua = giaithua*i
+    giaithua *=i
+print ('gia thua cua',n,'la',giaithua)
