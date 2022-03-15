@@ -1,0 +1,17 @@
+a = int(input("Nhap kich thuoc ma tran: a = "))
+b = [[0]*a]*a
+for i in range(a):
+    b[i] =[0]*a
+print(b)
+for i in range(a):
+    for j in range(a):
+        print('Nhap vao hang',i,'cot',j)
+        b[i][j] = eval(input())
+        if i==0 and j==0:
+            max_b=b[i][j]
+        if (i==j) and (b[i][j]>max_b):
+            max_b=b[i][j]
+print("Day so vua nhap la: ",a)
+for i in range(a):
+    print(b[i])
+print("Gia tri lon nhat",max_b)
