@@ -1,0 +1,7 @@
+a = int (input('Ban muon nhap vao bao nhieu so?'))
+for i in range (a):
+  print('Hay nhap vao gia tri thu ',i+1)
+  b = eval(input())
+  if i==0 : min_b = b
+  elif b<min_b : min_b = b
+print('gia tri nho nhat',min_b)
