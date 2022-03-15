@@ -1,0 +1,3 @@
+for i in range (3,24,5):
+# in t3 8 13 18 23
+    print (i)
