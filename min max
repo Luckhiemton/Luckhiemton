@@ -1,0 +1,17 @@
+a = int(input('1. minimum, 2. maximum'))
+if a==1:
+    b = int (input('Ban muon nhap vao bao nhieu so?'))
+    for i in range (b):
+        print('Hay nhap vao gia tri thu ',i+1)
+        c = eval(input())
+        if i==0 : min_c = c
+        elif c<min_c : min_c = c
+        print('gia tri nho nhat',min_c)
+if a==2:
+    b = int (input('Ban muon nhap vao bao nhieu so?'))
+    for i in range (b):
+        print('Hay nhap vao gia tri thu ',i+1)
+        c = eval(input())
+        if i==0 : max_c = c
+        elif c>max_c : max_c = c
+        print('gia tri lon nhat',max_c)
