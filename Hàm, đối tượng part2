@@ -1,0 +1,9 @@
+class Person():
+    def __init__(self,name,surname,address):
+        self.name = name
+        self.surname = surname
+        self.address = address
+    def tell(self):
+        print("Name: {}, Surname: {}, Address: {}".format(self.name,self.surname,self.address))
+Luc=Person('Luc','Bui','PY')
+Luc.tell()
