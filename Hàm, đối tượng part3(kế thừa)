@@ -1,0 +1,19 @@
+lass Person():
+    def __init__(self,name,surname,address):
+        self.name = name
+        self.surname = surname
+        self.address = address
+    def tell(self):
+        print("Name: {}, Surname: {}, Address: {}".format(self.name,self.surname,self.address))
+class Teacher(Person):
+    def __init__(self,name,surname,address,course,salary):
+        Person.__init__(self,name,surname,address)
+        self.course = course
+        self.salary = salary
+        # self.address = address
+        print("Initialized Teacher: {}".format(self.name))
+    def tell(self):
+        Person.tell(self)
+        print("Course: {}, Salary: {}".format(self.course,self.salary))
+Luc=Teacher('Luc','Xuan','PY','KS','10tr')
+Luc.tell()
