@@ -1,0 +1,68 @@
+n=int(input('Lop co bao nhieu sinh vien'))
+class sinhvien:
+    hoten=[]
+    mssv=[]
+    diemgiuaky=[]
+    diemthi=[]
+    tongket=[]
+    def them(self):
+        self.hoten.append(input('Nhap vao ho va ten: '))
+        self.mssv.append(input('Nhap vao MSSV: '))
+        a=eval(input('Nhap vao diem thi giua ky: '))
+        self.diemgiuaky.append(a)
+        b=eval(input('Nhap vao diem thi: '))
+        self.diemthi.append(b)
+        self.tongket.append(a*0.3+b*0.7)
+    def thaydoi(self,i):
+        if i>len(self.hoten): 
+            a=int(input('Khong co sinh vien nay can nhap lai'))
+            self.thaydoi(a)
+        else:
+            print('H&T truoc thay doi:',ds.hoten[i-1])
+            self.hoten[i-1] = input('Ho va ten moi:')
+            self.mssv[i-1] = input('MSSV moi: ')
+            self.diemgiuaky[i-1] = eval(input('Gk moi:'))
+            self.diemthi[i-1] = eval(input('thi moi:'))
+            self.tongket[i-1] = self.diemgiuaky[i-1]*0.3+self.diemthi[i-1]*0.7
+    def xuat(self,i):
+        if i>len(self.hoten):
+            print('Khong co sinh vien nay can nhap lai',i)
+        else:
+            print('Thong tin sinh vien nay la: ')
+            print('Ho va ten: ',self.hoten[i-1])
+            print('MSSV: ',self.mssv[i-1])
+            print('Diem gk: ',self.diemgiuaky[i-1])
+            print('Diem thi: ',self.diemthi[i-1])
+            print('Diem tong ket: ',self.tongket[i-1])
+    def xuatdanhsach(self):
+        for i in range(len(self.hoten[i+1]))
+            print('Ho va ten: ',self.hoten[i])
+            print('MSSV: ',self.mssv[i])
+            print('Diem giua ky: ',self.diemgiuaky[i])
+            print('Diem thi: ',self.diemthi[i])
+            print('Diem tong ket: ',self.tongket[i])
+    def sapxep(self):
+        for i in range(0,len(self.hoten)-1):
+            for j in range(i+1,len(self.hoten)):
+                if self.tongket[i]<self.tongket[j]:
+                    tmp=self.hoten[i]
+                    self.hoten[i]=self.hoten[j]
+                    self.hoten[j]=tmp
+                    tmp=self.mssv[i]
+                    self.mssv[i]=self.mssv[j]
+                    self.mssv[j]=tmp
+                    tmp=self.diemgiuaky[i]
+                    self.diemgiuaky[i]=self.diemgiuaky[j]
+                    self.diemgiuaky[j]=tmp
+                    tmp=self.diemthi[i]
+                    self.diemthi[i]=self.diemthi[j]
+                    self.diemthi[j]=tmp
+ds=sinhvien()
+for i in range(n):
+    ds.them()
+a=int(input('Nhap stt sv can thay doi'))
+ds.thaydoi(a)
+ds.xuat(1)
+ds.xuatdanhsach()
+ds.thaydoi()
+print(ds.tongket[0])
