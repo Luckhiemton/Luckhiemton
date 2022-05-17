@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import numpy as np
+# x = np.arange(50)*2*np.pi/50.
+# # plt.plot(x,np.sin(x),'r-^')
+# y1 = np.sin(x-np.pi/3)
+# plt.plot(x,np.sin(x),'x', markersize=5, color='blue')
+# plt.plot(y1,np.sin(y1),'d', markersize=5, color='red')
+# plt.show()
+
+x = np.arange(50)*2*np.pi/50.
+y = np.sin(x)
+y1 = np.sin(x-np.pi/2)
+
+# plt.plot(x,y1,'s',markersize=5, color='green')
+# plt.plot(x,y,'s',markersize=5, color='green')
+
+# plt.plot(x,y1,'g-.',linewidth = 4)
+# plt.plot(x,y,'gs')
+
+# plt.plot(x,y,'b-o',x,y1,'gs')
+
+# plt.scatter(x,y, 10,'green') # dau cham ( x,y,size,color)
+# plt.axis([0,7,-2,2])
+
+plt.bar(x,y,width = x[1]-x[0]) #bieu do dang thanh
+#plt.barh() thanh nam ngang
+
+plt.xlabel('radians')
+plt.show()
